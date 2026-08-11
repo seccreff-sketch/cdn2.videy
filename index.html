@@ -1,9 +1,227 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-  <title>Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Folder - Videy (7)</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #0d0d0d;
+            color: #ffffff;
+            padding: 16px;
+        }
+
+        /* Header Folder Style */
+        .folder-header-box {
+            background-color: #1a1518;
+            border: 1px solid #331f24;
+            border-radius: 16px;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .folder-icon {
+            background-color: #ff3366;
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .folder-title-group span {
+            font-size: 12px;
+            color: #ff3366;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .folder-title-group h1 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-top: 4px;
+        }
+
+        .section-label {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        /* Grid Video Container */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        /* Video Card */
+        .video-card {
+            background-color: #161616;
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            aspect-ratio: 9/16;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        /* Thumbnail / Background Simulated Video */
+        .video-thumb {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(1px) brightness(0.7); /* Efek sensor/blur khas */
+        }
+
+        /* Tombol Play di Tengah */
+        .play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ff3366;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 20px rgba(255, 51, 102, 0.6);
+            z-index: 2;
+        }
+
+        .play-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: #ffffff;
+            margin-left: 3px; /* Koreksi optis icon play */
+        }
+
+        /* Label / Judul di Bawah Video */
+        .video-info {
+            position: relative;
+            z-index: 2;
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 60%, rgba(0,0,0,0));
+            padding: 24px 12px 12px 12px;
+        }
+
+        .video-title {
+            font-size: 13px;
+            font-weight: 500;
+            color: #f1f1f1;
+            line-height: 1.3;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
-  <h1>Halo, halaman berhasil tampil</h1>
+
+    <!-- Header Folder -->
+    <div class="folder-header-box">
+        <div class="folder-icon">📁</div>
+        <div class="folder-title-group">
+            <span>FOLDER</span>
+            <h1>Videy (7)</h1>
+        </div>
+    </div>
+
+    <div class="section-label">Video</div>
+
+    <!-- Grid List Video -->
+    <div class="video-grid" id="videoGrid">
+        <!-- Card 1 -->
+        <div class="video-card" data-ad-url="https://pl30794235.effectivecpmnetwork.com/08/1b/01/081b0185fde476ef35473ecaea7ffaf6.js">
+            <img src="https://i.streamrizz.com/thumb/AOD4nXJWl-Bokep%20Indo%20Cewek%20Semok%20Toket%20Gede%20Colmek%20Pake%20Stik%20-%20Nana%20Cute,%20NanaCute%20-%20Korea,%20China,%20ABG.webp" class="video-thumb" alt="Thumb">
+            <div class="play-btn">
+                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="video-info">
+                <div class="video-title">Cewek Semok Toket Gede</div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="video-card" data-ad-url="https://pl30794235.effectivecpmnetwork.com/08/1b/01/081b0185fde476ef35473ecaea7ffaf6.js">
+            <img src="https://i.streamrizz.com/image/yxYEp.jpg" class="video-thumb" alt="Thumb">
+            <div class="play-btn">
+                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="video-info">
+                <div class="video-title">Suka Imut Body Tobrut</div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="video-card" data-ad-url="https://pl30794235.effectivecpmnetwork.com/08/1b/01/081b0185fde476ef35473ecaea7ffaf6.js">
+            <img src="https://i.streamrizz.com/image/GR136.jpg" class="video-thumb" alt="Thumb">
+            <div class="play-btn">
+                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="video-info">
+                <div class="video-title">Gadis Manis Sendirian di Kamar</div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="video-card" data-ad-url="https://pl30794235.effectivecpmnetwork.com/08/1b/01/081b0185fde476ef35473ecaea7ffaf6.js">
+            <img src="https://i.streamrizz.com/image/kfvcdAguUd.jpg" class="video-thumb" alt="Thumb">
+            <div class="play-btn">
+                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="video-info">
+                <div class="video-title">Hot Mom Berkerudung Hitam</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script JavaScript untuk Handler Iklan Popunder -->
+    <script>
+        const cards = document.querySelectorAll('.video-card');
+
+        cards.forEach(card => {
+            card.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                // Ambil link iklan dari atribut data-ad-url
+                const adUrl = this.getAttribute('data-ad-url');
+
+                if (!adUrl) {
+                    console.warn('data-ad-url tidak ditemukan pada card ini');
+                    return;
+                }
+
+                // Buka iklan di tab baru / popunder
+                const win = window.open(adUrl, '_blank');
+
+                if (win) {
+                    window.focus();
+                }
+
+                console.log('Video diklik, membuka iklan popunder:', adUrl);
+            });
+        });
+    </script>
 </body>
-</html>
+  </html>
