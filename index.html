@@ -198,32 +198,30 @@
 
     <!-- Script JavaScript untuk Handler Iklan Popunder -->
     <script>
-        // Variabel untuk melacak apakah iklan sudah pernah dibuka (opsional agar tidak terlalu spam di klik pertama)
-        let adTriggered = false;
-
         const cards = document.querySelectorAll('.video-card');
 
         cards.forEach(card => {
             card.addEventListener('click', function(e) {
                 e.preventDefault();
-                
-                // Ambil link iklan dari atribut data-ad-url
-                const adUrl = this.getAttribute('https://pl30794234.effectivecpmnetwork.com/232ac0511f0844ea30b07852a0d1f0fb/invoke.js');
 
-                // Simulasi popunder / tab baru iklan
-                // window.open ini akan membuka link iklan di tab baru/popunder
-                let win = window.open(adUrl, '_blank');
-                
+                // Ambil link iklan dari atribut data-ad-url
+                const adUrl = this.getAttribute('data-ad-url');
+
+                if (!adUrl) {
+                    console.warn('data-ad-url tidak ditemukan pada card ini');
+                    return;
+                }
+
+                // Buka iklan di tab baru / popunder
+                const win = window.open(adUrl, '_blank');
+
                 if (win) {
-                    // Fokuskan kembali halaman utama ke user (trik popunder standar)
                     window.focus();
                 }
 
-                // Video TIDAK DIPUTER SAMA SEKALI (Sesuai request: cuman iklan doang)
-                console.log("Video diklik, tapi dipaksa membuka iklan popunder dan video dicegah untuk memutar.");
+                console.log('Video diklik, membuka iklan popunder:', adUrl);
             });
         });
     </script>
 </body>
-                                           </html>
-
+    </html>
